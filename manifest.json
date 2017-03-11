@@ -1,0 +1,22 @@
+{
+  "name": "YoutubeHQ",
+  "description": "Youtube High Quality",
+  "author": "Shahedur Rahman",
+  "manifest_version": 2,
+  "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "yt.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://www.youtube.com/*" ],
+      "js": [ "yt.js" ],
+      "run_at": "document_idle"
+    }
+  ]
+}
